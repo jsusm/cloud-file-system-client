@@ -8,7 +8,7 @@ Run the server -> [cloud file system server](https://github.com/JesusJMM/go-clou
 
 ## Instructions
 
-If you want to use lan network, change baseUrl in src/lib/files.js file with your ip
+If you want to use in lan network, change baseUrl in src/lib/files.js file with your ip
 
 ``` bash
 npm install
