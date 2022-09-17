@@ -114,6 +114,8 @@ async function onDownload(fileName) {
 }
 
 .title {
-  color: var(--sage11)
+  color: var(--sage11);
+  margin-block: 1em;
+  font-weight: 600;
 }
 </style>

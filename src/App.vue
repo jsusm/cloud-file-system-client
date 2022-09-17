@@ -73,29 +73,4 @@ const [createFolderModal, toggleCreateFolderModal] = useToggle()
   color: var(--sage12);
   width: 100%;
 }
-
-.title {
-  margin-block: 1em;
-  font-weight: 600;
-}
-
-
-.directoryContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(162px, 1fr));
-  gap: 1em;
-  justify-content: center;
-}
-
-.file-list-move,
-.file-list-enter-active,
-.file-list-leave-active {
-  transition: all .5s ease;
-}
-
-.file-list-enter-from,
-.file-list-leave-to {
-  opacity: 0;
-  transform: translateY(20px);
-}
 </style>
