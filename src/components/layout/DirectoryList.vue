@@ -8,6 +8,7 @@ import { join } from '../../lib/join'
 import Modal from '../Modal.vue';
 import { useToggle } from '../../composable/toggle'
 import Button from '../ui/Button.vue';
+import { baseUrl } from '../../lib/files'
 
 const props = defineProps(['path'])
 defineEmits(['goto-dir'])
@@ -39,7 +40,7 @@ async function onDelete(fileName) {
   loadFiles(props.path)
 }
 async function onDownload(fileName) {
-  const destination = `http://192.168.0.105:8080/browse/${join([props.path, fileName])}?action=download`
+  const destination = `${baseUrl}${join([props.path, fileName])}?action=download`
   window.location.href = destination
 }
 

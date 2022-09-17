@@ -1,5 +1,7 @@
+export const baseUrl = `http://localhost:8080/browse/`
+
 export async function fetchFiles(path) {
-  const res = await fetch(`http://192.168.0.105:8080/browse/${path}`)
+  const res = await fetch(baseUrl + path)
   switch (res.status) {
     case 200:
       const json = await res.json()
@@ -12,7 +14,7 @@ export async function fetchFiles(path) {
 }
 export async function deleteFile(path) {
   console.log(path)
-  const res = await fetch(`http://192.168.0.105:8080/browse/${path}`, {
+  const res = await fetch(baseUrl + path, {
     method: "delete",
   })
   switch (res.status) {
@@ -25,7 +27,7 @@ export async function deleteFile(path) {
 export async function createFolder(path) {
   console.log(path)
   const params = new URLSearchParams([['type', 'folder']])
-  const baseUrl = new URL(path, "http://192.168.0.105:8080/browse/")
+  const baseUrl = new URL(path, baseUrl)
   const url = `${baseUrl}?${params}`
   const res = await fetch(url, {
     method: "post"

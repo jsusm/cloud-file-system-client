@@ -5,6 +5,7 @@ import InputWrapper from '../ui/InputWrapper.vue'
 import FileInput from '../ui/FileInput.vue'
 import Spinner from '../ui/Spinner.vue'
 import { loadFiles } from '../../store/fileList'
+import { baseUrl} from '../../lib/files'
 
 const props = defineProps({
   path: {
@@ -26,7 +27,7 @@ async function onSubmit() {
     data.append('files', file)
   }
   sendFileState.loading = true
-  const res = await fetch(`http://192.168.0.105:8080/browse/${props.path}`, {
+  const res = await fetch(`${baseUrl}${props.path}`, {
     method: 'post',
     body: data,
   })

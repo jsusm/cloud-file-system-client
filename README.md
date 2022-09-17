@@ -4,7 +4,12 @@ This project is a client for my [cloud file system server](https://github.com/Je
 ## Requirements
 Have nodejs and npm installed, [here's how](https://nodejs.org/en/download/)
 
+Run the server -> [cloud file system server](https://github.com/JesusJMM/go-cloud-file-system)
+
 ## Instructions
+
+If you want to use lan network, change baseUrl in src/lib/files.js file with your ip
+
 ``` bash
 npm install
 
