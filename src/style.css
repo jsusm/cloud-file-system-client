@@ -1,0 +1,38 @@
+@import "@radix-ui/colors/sage.css";
+@import "@radix-ui/colors/sageDark.css";
+@import "@radix-ui/colors/teal.css";
+@import "@radix-ui/colors/tealDark.css";
+@import "@radix-ui/colors/mint.css";
+@import "@radix-ui/colors/mintDark.css";
+@import "@radix-ui/colors/red.css";
+@import "@radix-ui/colors/redDark.css";
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media ( min-width: 700px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  box-sizing: border-box;
+}
+#themeProvider {
+  min-height: 100vh;
+  background-color: var(--sage1);
+  color: var(--sage12);
+  isolation: isolate;
+}
