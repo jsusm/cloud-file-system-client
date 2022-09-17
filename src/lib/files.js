@@ -1,10 +1,12 @@
-export const baseUrl = `http://localhost:8080/browse/`
+const baseUrl = `http://localhost:8080/browse/`
+export { baseUrl }
 
 export async function fetchFiles(path) {
   const res = await fetch(baseUrl + path)
   switch (res.status) {
     case 200:
       const json = await res.json()
+      console.log(json)
       return [json, undefined]
     case 404:
       return [{}, 'This path do not exists']
@@ -25,10 +27,10 @@ export async function deleteFile(path) {
   }
 }
 export async function createFolder(path) {
-  console.log(path)
+  console.log({ baseUrl })
   const params = new URLSearchParams([['type', 'folder']])
-  const baseUrl = new URL(path, baseUrl)
-  const url = `${baseUrl}?${params}`
+  const _url = new URL(path, baseUrl)
+  const url = `${_url}?${params}`
   const res = await fetch(url, {
     method: "post"
   })

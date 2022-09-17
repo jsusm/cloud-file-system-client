@@ -41,7 +41,7 @@ const [createFolderModal, toggleCreateFolderModal] = useToggle()
     </Modal>
   </Theme>
 </template>
-<style>
+<style scoped>
 .container {
   max-width: 1000px;
   margin: auto;

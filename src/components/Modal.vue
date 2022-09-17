@@ -36,7 +36,7 @@ defineEmits(['close'])
   background-color: var(--sage1);
   border-radius: 1rem;
   max-width: 25em;
-  width: 90%;
+  min-width: 90%;
 }
 .outlet {
   position: fixed;
